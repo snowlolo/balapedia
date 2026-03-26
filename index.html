@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balapedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button id="theme-toggle">Dark</button>
+
+<h1>Balapedia</h1>
+
+<nav id="site-nav">
+    <a href="#section-jokers">Jokers</a>
+    <a href="#section-blinds">Blinds</a>
+    <a href="#section-tags">Tags</a>
+    <a href="#section-hands">Poker Hands</a>
+    <a href="#section-decks">Decks</a>
+    <a href="#section-shop">Shop</a>
+    <a href="#section-vouchers">Vouchers</a>
+    <a href="#section-stakes">Stakes</a>
+    <a href="#section-antes">Antes</a>
+    <a href="#section-balarodle">Balarodle</a>
+</nav>
+
+<p>Welcome to <strong>Balapedia</strong>, a fan-made wiki for Balatro — a poker-themed roguelike deck-building game developed by LocalThunk and published by Playstack.
+Build powerful synergies, discover joker combos, and beat the blinds to win. This wiki covers jokers, blinds, tags, poker hands, decks, vouchers, stakes, and antes.</p>
+
+<p>For more information, visit the <a href="https://store.steampowered.com/app/2379780/Balatro/">Balatro Steam Page</a>
+or the <a href="https://balatrogame.fandom.com/wiki/Balatro_Wiki">Balatro Fandom Wiki</a>.</p>
+
+<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2379780/header.jpg" alt="Balatro game banner" width="460">
+
+<hr>
+
+<!-- JOKERS SECTION -->
+<h2 id="section-jokers">jokers</h2>
+
+<p>There are 150 jokers in Balatro across 4 rarities: Common (60), Uncommon (65), Rare (20), and Legendary (5). Shop appearance rates are 70% Common, 25% Uncommon, and 5% Rare. Legendary jokers can only be obtained through The Soul spectral card.</p>
+
+<div id="joker-controls">
+    <input type="text" id="joker-search" placeholder="Search jokers..." autocomplete="off">
+    <div id="rarity-filters">
+        <button class="rarity-btn active" data-rarity="all">All</button>
+        <button class="rarity-btn" data-rarity="common">Common</button>
+        <button class="rarity-btn" data-rarity="uncommon">Uncommon</button>
+        <button class="rarity-btn" data-rarity="rare">Rare</button>
+        <button class="rarity-btn" data-rarity="legendary">Legendary</button>
+    </div>
+    <p id="joker-count"></p>
+</div>
+
+<h3 id="h3-common">Common Jokers (60)</h3>
+<ol data-rarity="common">
+    <li>Joker - +4 Mult</li>
+    <li>Greedy Joker - Played cards with Diamond suit give +3 Mult when scored</li>
+    <li>Lusty Joker - Played cards with Heart suit give +3 Mult when scored</li>
+    <li>Wrathful Joker - Played cards with Spade suit give +3 Mult when scored</li>
+    <li>Gluttonous Joker - Played cards with Club suit give +3 Mult when scored</li>
+    <li>Jolly Joker - +8 Mult if played hand contains a Pair</li>
+    <li>Zany Joker - +12 Mult if played hand contains a Three of a Kind</li>
+    <li>Mad Joker - +10 Mult if played hand contains a Two Pair</li>
+    <li>Crazy Joker - +12 Mult if played hand contains a Straight</li>
+    <li>Droll Joker - +10 Mult if played hand contains a Flush</li>
+    <li>Sly Joker - +50 Chips if played hand contains a Pair</li>
+    <li>Wily Joker - +100 Chips if played hand contains a Three of a Kind</li>
+    <li>Clever Joker - +80 Chips if played hand contains a Two Pair</li>
+    <li>Devious Joker - +100 Chips if played hand contains a Straight</li>
+    <li>Crafty Joker - +80 Chips if played hand contains a Flush</li>
+    <li>Half Joker - +20 Mult if played hand contains 3 or fewer cards</li>
+    <li>Credit Card - Go up to -$20 in debt</li>
+    <li>Banner - +30 Chips for each remaining discard</li>
+    <li>Mystic Summit - +15 Mult when 0 discards remaining</li>
+    <li>8 Ball - 1 in 4 chance for each played 8 to create a Tarot card when scored</li>
+    <li>Misprint - +0-23 Mult</li>
+    <li>Raised Fist - Adds double the rank of lowest ranked card held in hand to Mult</li>
+    <li>Chaos the Clown - 1 free reroll per shop</li>
+    <li>Scary Face - Played face cards give +30 Chips when scored</li>
+    <li>Abstract Joker - +3 Mult for each Joker card</li>
+    <li>Delayed Gratification - Earn $2 per discard if no discards are used by end of round</li>
+    <li>Gros Michel - +15 Mult; 1 in 6 chance to be destroyed at end of round</li>
+    <li>Even Steven - Played cards with even rank give +4 Mult when scored</li>
+    <li>Odd Todd - Played cards with odd rank give +31 Chips when scored</li>
+    <li>Scholar - Played Aces give +20 Chips and +4 Mult when scored</li>
+    <li>Business Card - Played face cards have a 1 in 2 chance to give $2 when scored</li>
+    <li>Supernova - Adds the number of times poker hand has been played this run to Mult</li>
+    <li>Ride the Bus - Gains +1 Mult per consecutive hand played without a scoring face card</li>
+    <li>Egg - Gains $3 of sell value at end of round</li>
+    <li>Faceless Joker - Earn $5 if 3 or more face cards are discarded at same time</li>
+    <li>Green Joker - +1 Mult per hand played; -1 Mult per discard</li>
+    <li>Superposition - Create a Tarot card if poker hand contains an Ace and a Straight</li>
+    <li>To Do List - Earn $4 if poker hand matches target hand; changes each round</li>
+    <li>Cavendish - X3 Mult; 1 in 1000 chance to be destroyed at end of round</li>
+    <li>Red Card - Gains +3 Mult when any Booster Pack is skipped</li>
+    <li>Square Joker - Gains +4 Chips if played hand has exactly 4 cards</li>
+    <li>Riff-Raff - When Blind is selected, create 2 Common Jokers (if room)</li>
+    <li>Blue Joker - +2 Chips for each remaining card in deck</li>
+    <li>Ice Cream - +100 Chips; -5 Chips for every hand played</li>
+    <li>Splash - Every played card counts in scoring</li>
+    <li>Walkie Talkie - Each played 10 or 4 gives +10 Chips and +4 Mult when scored</li>
+    <li>Smiley Face - Played face cards give +5 Mult when scored</li>
+    <li>Popcorn - +20 Mult; -4 Mult per round played</li>
+    <li>Reserved Parking - Each face card held in hand has a 1 in 2 chance to give $1</li>
+    <li>Mail-In Rebate - Earn $5 for each discarded card of specified rank; rank changes per round</li>
+    <li>Hallucination - 1 in 2 chance to create a Tarot card when any Booster Pack is opened</li>
+    <li>Fortune Teller - +1 Mult per Tarot card used this run</li>
+    <li>Juggler - +1 hand size</li>
+    <li>Drunkard - +1 discard each round</li>
+    <li>Golden Joker - Earn $4 at end of each round</li>
+    <li>Stone Joker - Gives +25 Chips for each Stone Card in full deck</li>
+    <li>Golden Ticket - Played Gold cards earn $4 when scored</li>
+    <li>Swashbuckler - Adds the sell value of all other owned Jokers to Mult</li>
+    <li>Shoot the Moon - Each Queen held in hand gives +13 Mult</li>
+    <li>Hanging Chad - Retrigger first played card used in scoring 2 additional times</li>
+</ol>
+
+<h3 id="h3-uncommon">Uncommon Jokers (65)</h3>
+<ol data-rarity="uncommon">
+    <li>Pareidolia - All cards are considered face cards</li>
+    <li>Space Joker - 1 in 4 chance to upgrade level of played poker hand</li>
+    <li>Joker Stencil - X1 Mult for each empty Joker slot</li>
+    <li>Four Fingers - All Flushes and Straights can be made with 4 cards</li>
+    <li>Mime - Retrigger all card held in hand abilities</li>
+    <li>Ceremonial Dagger - When Blind is selected, destroy Joker to the right and permanently add double its sell value to Mult</li>
+    <li>Marble Joker - Adds one Stone card to deck when Blind is selected</li>
+    <li>Loyalty Card - X4 Mult every 6 hands played</li>
+    <li>Dusk - Retrigger all played cards in final hand of round</li>
+    <li>Fibonacci - Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored</li>
+    <li>Steel Joker - Gives X0.2 Mult for each Steel Card in full deck</li>
+    <li>Hack - Retrigger each played 2, 3, 4, or 5</li>
+    <li>Blackboard - X3 Mult if all cards held in hand are Spades or Clubs</li>
+    <li>Constellation - Gains X0.1 Mult every time a Planet card is used</li>
+    <li>Hiker - Every played card permanently gains +5 Chips when scored</li>
+    <li>Sixth Sense - If first hand of round is a single 6, destroy it and create a Spectral card</li>
+    <li>Burglar - When Blind is selected, gain +3 Hands and lose all discards</li>
+    <li>Runner - Gains +15 Chips if played hand contains a Straight</li>
+    <li>Midas Mask - All played face cards become Gold cards when scored</li>
+    <li>Luchador - Sell this card to disable the current Boss Blind</li>
+    <li>Card Sharp - X3 Mult if played poker hand has already been played this round</li>
+    <li>Madness - When Small or Big Blind is selected, gain X0.5 Mult and destroy a random Joker</li>
+    <li>Hologram - Gains X0.25 Mult every time a playing card is added to deck</li>
+    <li>Cloud 9 - Earn $1 for each 9 in full deck at end of round</li>
+    <li>Rocket - Earn $1 at end of round; payout increases by $2 when Boss Blind is defeated</li>
+    <li>Gift Card - Add $1 of sell value to every Joker and Consumable card at end of round</li>
+    <li>Turtle Bean - +5 hand size; reduces by 1 each round</li>
+    <li>Erosion - +4 Mult for each card below deck's starting size in full deck</li>
+    <li>Astronomer - All Planet cards and Celestial Packs in the shop are free</li>
+    <li>Bull - +2 Chips for each $1 you have</li>
+    <li>Diet Cola - Sell this card to create a free Double Tag</li>
+    <li>Trading Card - If first discard of round has only 1 card, destroy it and earn $3</li>
+    <li>Flash Card - Gains +2 Mult per reroll in the shop</li>
+    <li>Spare Trousers - Gains +2 Mult if played hand contains a Two Pair</li>
+    <li>Ramen - X2 Mult; loses X0.01 Mult per card discarded</li>
+    <li>Seltzer - Retrigger all cards played for next 10 hands</li>
+    <li>Castle - Gains +3 Chips per discarded card of specified suit; suit changes each round</li>
+    <li>Shortcut - Allows Straights to be made with gaps of 1 rank</li>
+    <li>Vampire - Gains X0.1 Mult per scoring Enhanced card played; removes card Enhancement</li>
+    <li>Photograph - First played face card gives X2 Mult when scored</li>
+    <li>To the Moon - Earn extra $1 of interest for every $5 at end of round</li>
+    <li>Lucky Cat - Gains X0.25 Mult every time a Lucky card successfully triggers</li>
+    <li>Séance - If poker hand is a Straight Flush, create a Spectral card</li>
+    <li>Mr. Bones - Prevents death if chips scored are at least 25% of required chips; self-destructs</li>
+    <li>Acrobat - X3 Mult on final hand of round</li>
+    <li>Sock and Buskin - Retrigger all played face cards</li>
+    <li>Troubadour - +2 hand size; -1 hand each round</li>
+    <li>Certificate - When round begins, add a random playing card with a random seal to hand</li>
+    <li>Smeared Joker - Hearts and Diamonds count as the same suit; Spades and Clubs count as the same suit</li>
+    <li>Throwback - Gains X0.25 Mult for each Blind skipped this run</li>
+    <li>Rough Gem - Played Diamond suit cards earn $1 when scored</li>
+    <li>Bloodstone - 1 in 2 chance for Heart suit cards to give X1.5 Mult when scored</li>
+    <li>Arrowhead - Played Spade suit cards give +50 Chips when scored</li>
+    <li>Onyx Agate - Played Club suit cards give +7 Mult when scored</li>
+    <li>Glass Joker - Gains X0.75 Mult for every Glass Card that is destroyed</li>
+    <li>Showman - Joker, Tarot, Planet, and Spectral cards may appear multiple times</li>
+    <li>Flower Pot - X3 Mult if poker hand contains a Diamond, Club, Heart, and Spade card</li>
+    <li>Merry Andy - +3 discards each round; -1 hand size</li>
+    <li>Oops! All 6s - Doubles all listed probabilities</li>
+    <li>The Idol - Each played card of specified rank and suit gives X2 Mult when scored; changes per round</li>
+    <li>Seeing Double - X2 Mult if played hand has a scoring Club card and a scoring card of any other suit</li>
+    <li>Matador - Earn $8 if played hand triggers the Boss Blind ability</li>
+    <li>Satellite - Earn $1 at end of round per unique Planet card used this run</li>
+    <li>Cartomancer - Create a Tarot card when Blind is selected</li>
+    <li>Bootstraps - +2 Mult for every $5 you have</li>
+</ol>
+
+<h3 id="h3-rare">Rare Jokers (20)</h3>
+<ol data-rarity="rare">
+    <li>DNA - If first hand of round has only 1 card, add a permanent copy to deck and draw it to hand</li>
+    <li>Vagabond - Create a Tarot card if hand is played with $4 or less</li>
+    <li>Baron - Each King held in hand gives X1.5 Mult</li>
+    <li>Ancient Joker - Each played card of specified suit gives X1.5 Mult when scored; suit changes per round</li>
+    <li>Baseball Card - Uncommon Jokers each give X1.5 Mult</li>
+    <li>Campfire - Gains X0.25 Mult for each card sold; resets when Boss Blind is defeated</li>
+    <li>Blueprint - Copies ability of Joker to the right</li>
+    <li>Wee Joker - Gains +8 Chips when each played 2 is scored</li>
+    <li>Hit the Road - Gains X0.5 Mult for every Jack discarded this round</li>
+    <li>The Duo - X2 Mult if played hand contains a Pair</li>
+    <li>The Trio - X3 Mult if played hand contains a Three of a Kind</li>
+    <li>The Family - X4 Mult if played hand contains a Four of a Kind</li>
+    <li>The Order - X3 Mult if played hand contains a Straight</li>
+    <li>The Tribe - X2 Mult if played hand contains a Flush</li>
+    <li>Stuntman - +250 Chips; -2 hand size</li>
+    <li>Invisible Joker - After 2 rounds, sell this card to Duplicate a random Joker</li>
+    <li>Brainstorm - Copies the ability of the leftmost Joker</li>
+    <li>Driver's License - X3 Mult if you have at least 16 Enhanced cards in your full deck</li>
+    <li>Burnt Joker - Upgrade the level of the first discarded poker hand each round</li>
+    <li>Obelisk - Gains X0.2 Mult per consecutive hand without playing most played poker hand</li>
+</ol>
+
+<h3 id="h3-legendary">Legendary Jokers (5)</h3>
+<p>Legendary jokers cannot appear in the shop. They can only be obtained through The Soul spectral card.</p>
+<ol data-rarity="legendary">
+    <li>Canio - X1 Mult; gains X1 Mult when a face card is destroyed (permanent)</li>
+    <li>Triboulet - Played Kings and Queens each give X2 Mult when scored</li>
+    <li>Yorick - X1 Mult; gains X1 Mult every 23 cards discarded</li>
+    <li>Chicot - Disables effect of every Boss Blind</li>
+    <li>Perkeo - Creates a Negative copy of 1 random consumable card at end of shop</li>
+</ol>
+
+<hr>
+
+<!-- BLINDS SECTION -->
+<h2 id="section-blinds">blinds</h2>
+
+<h3>Standard Blinds</h3>
+<ul>
+    <li><strong>Small Blind</strong> - Base chip requirement</li>
+    <li><strong>Big Blind</strong> - 1.5x chip requirement</li>
+    <li><strong>Boss Blind</strong> - 2x chip requirement with a special ability</li>
+</ul>
+
+<h3>Boss Blinds</h3>
+<ol>
+    <li>The Hook - Discards 2 random cards per hand</li>
+    <li>The Ox - Playing a specified poker hand sets money to $0</li>
+    <li>The House - First hand is drawn face down</li>
+    <li>The Wall - Extra large blind (4x base)</li>
+    <li>The Wheel - 1 in 7 chance to draw cards face down</li>
+    <li>The Arm - Decreases level of played poker hand by 1</li>
+    <li>The Club - All Club cards are debuffed</li>
+    <li>The Fish - Cards drawn face down after each hand played</li>
+    <li>The Psychic - Must play 5 cards</li>
+    <li>The Goad - All Spade cards are debuffed</li>
+    <li>The Water - Start with 0 discards</li>
+    <li>The Window - All Diamond cards are debuffed</li>
+    <li>The Manacle - -1 hand size</li>
+    <li>The Eye - No repeat poker hands this round</li>
+    <li>The Mouth - Only play 1 poker hand type this round</li>
+    <li>The Plant - All face cards are debuffed</li>
+    <li>The Serpent - After play or discard, always draw 3 cards</li>
+    <li>The Pillar - Cards played previously this Ante are debuffed</li>
+    <li>The Needle - Play only 1 hand</li>
+    <li>The Head - All Heart cards are debuffed</li>
+    <li>The Tooth - Lose $1 per card played</li>
+    <li>The Flint - Base Chips and Mult are halved</li>
+    <li>The Mark - All face cards are drawn face down</li>
+</ol>
+
+<h3>Finisher Blinds <span class="finisher-note">(Antes 8, 16, 24, 32…)</span></h3>
+<p>These boss blinds only appear as the final boss of every 8th Ante.</p>
+<ol>
+    <li>Amber Acorn - Flips and shuffles all Joker cards</li>
+    <li>Verdant Leaf - All cards are debuffed until 1 Joker is sold</li>
+    <li>Violet Vessel - Very large blind</li>
+    <li>Crimson Heart - One random Joker is disabled each hand</li>
+    <li>Cerulean Bell - Forces 1 card to always be selected</li>
+</ol>
+
+<hr>
+
+<!-- TAGS SECTION -->
+<h2 id="section-tags">tags</h2>
+
+<p>Tags are rewards obtained when you skip a Blind. Each tag provides a different bonus.</p>
+
+<ul>
+    <li><strong>Uncommon Tag</strong> - Shop has a free Uncommon Joker</li>
+    <li><strong>Rare Tag</strong> - Shop has a free Rare Joker</li>
+    <li><strong>Negative Tag</strong> - Next base edition shop Joker is free and becomes Negative</li>
+    <li><strong>Foil Tag</strong> - Next base edition shop Joker is free and becomes Foil</li>
+    <li><strong>Holographic Tag</strong> - Next base edition shop Joker is free and becomes Holographic</li>
+    <li><strong>Polychrome Tag</strong> - Next base edition shop Joker is free and becomes Polychrome</li>
+    <li><strong>Investment Tag</strong> - After defeating the Boss Blind, gain $25</li>
+    <li><strong>Voucher Tag</strong> - Adds a Voucher to the next shop</li>
+    <li><strong>Boss Tag</strong> - Rerolls the Boss Blind</li>
+    <li><strong>Standard Tag</strong> - Gives a free Standard Pack</li>
+    <li><strong>Charm Tag</strong> - Gives a free Arcana Pack</li>
+    <li><strong>Meteor Tag</strong> - Gives a free Celestial Pack</li>
+    <li><strong>Buffoon Tag</strong> - Gives a free Buffoon Pack</li>
+    <li><strong>Handy Tag</strong> - Gives $1 per hand played this run</li>
+    <li><strong>Garbage Tag</strong> - Gives $1 per unused discard this run</li>
+    <li><strong>Ethereal Tag</strong> - Gives a free Spectral Pack</li>
+    <li><strong>Coupon Tag</strong> - Initial cards in next shop are free</li>
+    <li><strong>Double Tag</strong> - Gives a copy of the next selected Tag</li>
+    <li><strong>Juggle Tag</strong> - +3 hand size next round</li>
+    <li><strong>D6 Tag</strong> - Starts next shop with a free reroll</li>
+    <li><strong>Top-up Tag</strong> - Create up to 2 Common Jokers</li>
+    <li><strong>Speed Tag</strong> - Gives $5 per Ante skipped this run</li>
+    <li><strong>Orbital Tag</strong> - Upgrade a poker hand by 3 levels</li>
+    <li><strong>Economy Tag</strong> - Doubles your money (max $40)</li>
+</ul>
+
+<hr>
+
+<!-- POKER HANDS SECTION -->
+<h2 id="section-hands">poker hands</h2>
+
+<p>Ranked from lowest to highest base score. <span class="hand-special-note">★ hands require special jokers or modifiers to play.</span></p>
+
+<div id="hands-grid">
+    <div class="hand-card"><div class="hand-name">High Card</div><div class="hand-stats"><span class="hand-chips">5</span> × <span class="hand-mult">1</span></div><div class="hand-desc">any single card</div></div>
+    <div class="hand-card"><div class="hand-name">Pair</div><div class="hand-stats"><span class="hand-chips">10</span> × <span class="hand-mult">2</span></div><div class="hand-desc">two of same rank</div></div>
+    <div class="hand-card"><div class="hand-name">Two Pair</div><div class="hand-stats"><span class="hand-chips">20</span> × <span class="hand-mult">2</span></div><div class="hand-desc">two different pairs</div></div>
+    <div class="hand-card"><div class="hand-name">Three of a Kind</div><div class="hand-stats"><span class="hand-chips">30</span> × <span class="hand-mult">3</span></div><div class="hand-desc">three of same rank</div></div>
+    <div class="hand-card"><div class="hand-name">Straight</div><div class="hand-stats"><span class="hand-chips">30</span> × <span class="hand-mult">4</span></div><div class="hand-desc">five consecutive ranks</div></div>
+    <div class="hand-card"><div class="hand-name">Flush</div><div class="hand-stats"><span class="hand-chips">35</span> × <span class="hand-mult">4</span></div><div class="hand-desc">five of same suit</div></div>
+    <div class="hand-card"><div class="hand-name">Full House</div><div class="hand-stats"><span class="hand-chips">40</span> × <span class="hand-mult">4</span></div><div class="hand-desc">three of a kind + pair</div></div>
+    <div class="hand-card"><div class="hand-name">Four of a Kind</div><div class="hand-stats"><span class="hand-chips">60</span> × <span class="hand-mult">7</span></div><div class="hand-desc">four of same rank</div></div>
+    <div class="hand-card"><div class="hand-name">Straight Flush</div><div class="hand-stats"><span class="hand-chips">100</span> × <span class="hand-mult">8</span></div><div class="hand-desc">straight + flush</div></div>
+    <div class="hand-card"><div class="hand-name">Royal Flush</div><div class="hand-stats"><span class="hand-chips">100</span> × <span class="hand-mult">8</span></div><div class="hand-desc">10 J Q K A same suit</div></div>
+    <div class="hand-card hand-special"><div class="hand-name">Five of a Kind ★</div><div class="hand-stats"><span class="hand-chips">120</span> × <span class="hand-mult">12</span></div><div class="hand-desc">five of same rank</div></div>
+    <div class="hand-card hand-special"><div class="hand-name">Flush House ★</div><div class="hand-stats"><span class="hand-chips">140</span> × <span class="hand-mult">14</span></div><div class="hand-desc">full house + flush</div></div>
+    <div class="hand-card hand-special"><div class="hand-name">Flush Five ★</div><div class="hand-stats"><span class="hand-chips">160</span> × <span class="hand-mult">16</span></div><div class="hand-desc">five of a kind + flush</div></div>
+</div>
+
+<hr>
+
+<!-- DECKS SECTION -->
+<h2 id="section-decks">decks</h2>
+
+<p>There are 15 decks in Balatro. Each deck modifies your starting conditions. The Red, Blue, Yellow, and Green decks are unlocked from the start. Others are unlocked through gameplay achievements.</p>
+
+<ul>
+    <li><strong>Red Deck</strong> - +1 discard each round</li>
+    <li><strong>Blue Deck</strong> - +1 hand each round</li>
+    <li><strong>Yellow Deck</strong> - Start with +$10</li>
+    <li><strong>Green Deck</strong> - No Interest earned; earn $2 per remaining hand and $1 per remaining discard at end of round</li>
+    <li><strong>Black Deck</strong> - +1 Joker slot; -1 hand each round</li>
+    <li><strong>Magic Deck</strong> - Start with the Crystal Ball voucher and 2 copies of The Fool tarot card</li>
+    <li><strong>Nebula Deck</strong> - Start with the Telescope voucher; -1 consumable slot</li>
+    <li><strong>Ghost Deck</strong> - Spectral cards may appear in the shop; start with a free Spectral Pack</li>
+    <li><strong>Abandoned Deck</strong> - Start with no face cards (all Jacks, Queens, and Kings removed from deck)</li>
+    <li><strong>Checkered Deck</strong> - Start with 26 Spades and 26 Hearts (no Clubs or Diamonds)</li>
+    <li><strong>Zodiac Deck</strong> - Start with Tarot Merchant, Planetary Merchant, and Overstock vouchers</li>
+    <li><strong>Painted Deck</strong> - +2 hand size; -1 Joker slot</li>
+    <li><strong>Anaglyph Deck</strong> - After defeating each Boss Blind, get a Double Tag</li>
+    <li><strong>Plasma Deck</strong> - Balance Chips and Mult when calculating score, then double the result; no interest earned</li>
+    <li><strong>Erratic Deck</strong> - All card ranks and suits in the deck are randomized</li>
+</ul>
+
+<hr>
+
+<!-- SHOP SECTION -->
+<h2 id="section-shop">shop</h2>
+
+<p>The shop appears after every blind. It has 2 card slots, 2 booster pack slots, and 1 voucher slot. Rerolling costs $5, increasing by $1 per reroll — resets each new shop. Interest pays $1 per $5 held at end of round, capped at $5 (raised by Seed Money / Money Tree).</p>
+
+<h3>Card Slot Contents</h3>
+<ul>
+    <li><strong>Joker</strong> — 71.4% chance (Common 70% · Uncommon 25% · Rare 5%)</li>
+    <li><strong>Tarot Card</strong> — 14.3% chance</li>
+    <li><strong>Planet Card</strong> — 14.3% chance</li>
+    <li><strong>Playing Card</strong> — available with Magic Trick voucher</li>
+    <li><strong>Spectral Card</strong> — available with Ghost Deck or Omen Globe voucher</li>
+</ul>
+
+<h3>Joker Prices</h3>
+<ul>
+    <li><strong>Common</strong> — $1–$6</li>
+    <li><strong>Uncommon</strong> — $4–$8</li>
+    <li><strong>Rare</strong> — $7–$10</li>
+    <li><strong>Legendary</strong> — only obtainable via The Soul spectral card (not purchasable)</li>
+</ul>
+
+<h3>Editions</h3>
+<ul>
+    <li><strong>Foil</strong> — +$2 to base price · +50 Chips</li>
+    <li><strong>Holographic</strong> — +$3 to base price · +10 Mult</li>
+    <li><strong>Polychrome</strong> — +$4 to base price · X1.5 Mult</li>
+    <li><strong>Negative</strong> — +$5 to base price · +1 Joker slot</li>
+</ul>
+
+<h3>Booster Packs</h3>
+<ul>
+    <li><strong>Standard Pack</strong> — Playing cards added to your deck · Normal $4 (pick 1 of 3) · Jumbo $6 (pick 1 of 5) · Mega $8 (pick 2 of 5)</li>
+    <li><strong>Arcana Pack</strong> — Tarot cards · Normal $4 (pick 1 of 3) · Jumbo $6 (pick 1 of 5) · Mega $8 (pick 2 of 5)</li>
+    <li><strong>Celestial Pack</strong> — Planet cards · Normal $4 (pick 1 of 3) · Jumbo $6 (pick 1 of 5) · Mega $8 (pick 2 of 5)</li>
+    <li><strong>Buffoon Pack</strong> — Joker cards · Normal $4 (pick 1 of 2) · Jumbo $6 (pick 1 of 4) · Mega $8 (pick 2 of 4)</li>
+    <li><strong>Spectral Pack</strong> — Spectral cards · Normal $4 (pick 1 of 2) · Jumbo $6 (pick 1 of 4) · Mega $8 (pick 2 of 4)</li>
+</ul>
+
+<hr>
+
+<!-- VOUCHERS SECTION -->
+<h2 id="section-vouchers">vouchers</h2>
+
+<p>There are 32 vouchers in Balatro, sold in 16 base/upgrade pairs. Each costs $10. Buying a base voucher unlocks its upgrade in future shops. Each entry shows: <strong>Base</strong> → <strong>Upgrade</strong>.</p>
+
+<ul class="voucher-list">
+    <li><strong>Overstock</strong> - +1 card slot in shop (3 total)<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Overstock Plus</strong> - +1 more card slot (4 total)</div></li>
+    <li><strong>Clearance Sale</strong> - All cards and packs in shop are 25% off<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Liquidation</strong> - 50% off</div></li>
+    <li><strong>Hone</strong> - Foil, Holographic, and Polychrome cards appear 2× more often<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Glow Up</strong> - 4× more often</div></li>
+    <li><strong>Reroll Surplus</strong> - Rerolls cost $2 less<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Reroll Glut</strong> - Rerolls cost an additional $2 less ($4 total)</div></li>
+    <li><strong>Crystal Ball</strong> - +1 Consumable slot<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Omen Globe</strong> - Spectral cards may appear in Arcana Packs</div></li>
+    <li><strong>Telescope</strong> - Celestial Packs always contain the Planet card for your most played hand<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Observatory</strong> - Each Planet card used gives its hand X1.5 Mult permanently</div></li>
+    <li><strong>Grabber</strong> - +1 hand per round permanently<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Nacho Tong</strong> - +1 more hand per round (+2 total)</div></li>
+    <li><strong>Wasteful</strong> - +1 discard per round permanently<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Recyclomancy</strong> - +1 more discard per round (+2 total)</div></li>
+    <li><strong>Tarot Merchant</strong> - Tarot cards appear 2× more often in shop<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Tarot Tycoon</strong> - 4× more often</div></li>
+    <li><strong>Planet Merchant</strong> - Planet cards appear 2× more often in shop<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Planet Tycoon</strong> - 4× more often</div></li>
+    <li><strong>Seed Money</strong> - Raise interest cap per round to $10<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Money Tree</strong> - Raise interest cap to $20</div></li>
+    <li><strong>Blank</strong> - Does nothing<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Antimatter</strong> - +1 Joker slot</div></li>
+    <li><strong>Magic Trick</strong> - Playing cards can be purchased from the shop<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Illusion</strong> - Shop playing cards may also have Enhancements, Editions, and/or Seals</div></li>
+    <li><strong>Hieroglyph</strong> - −1 Ante, −1 hand size per round<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Petroglyph</strong> - −1 Ante again, −1 discard per round</div></li>
+    <li><strong>Director's Cut</strong> - Reroll the Boss Blind once per Ante for $10<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Retcon</strong> - Reroll Boss Blind unlimited times for $10</div></li>
+    <li><strong>Paint Brush</strong> - +1 hand size<div class="voucher-upgrade"><span class="voucher-arrow">↳</span> <strong>Palette</strong> - +1 hand size again (+2 total)</div></li>
+</ul>
+
+<hr>
+
+<!-- STAKES SECTION -->
+<h2 id="section-stakes">stakes</h2>
+
+<p>Stakes are difficulty modifiers that increase the challenge of a run. Each stake adds a new modifier on top of all previous ones. Higher stakes unlock cosmetic rewards.</p>
+
+<ul>
+    <li><strong>White Stake</strong> - Base difficulty; no extra modifiers</li>
+    <li><strong>Red Stake</strong> - Small Blind gives no reward money</li>
+    <li><strong>Green Stake</strong> - Required score scales faster each Ante</li>
+    <li><strong>Black Stake</strong> - 30% chance for Jokers in shops and packs to have an Eternal sticker (cannot be sold)</li>
+    <li><strong>Blue Stake</strong> - -1 Discard each round</li>
+    <li><strong>Purple Stake</strong> - Required score scales even faster each Ante</li>
+    <li><strong>Orange Stake</strong> - 30% chance for Jokers in shops and packs to have a Perishable sticker (debuffed after 5 rounds)</li>
+    <li><strong>Gold Stake</strong> - 30% chance for Jokers in shops and packs to have a Rental sticker (costs $3 per round)</li>
+</ul>
+
+<hr>
+
+<!-- ANTES SECTION -->
+<h2 id="section-antes">antes</h2>
+
+<p>A standard run ends at Ante 8. Antes 9+ are <strong>Endless Mode</strong>. Values shown are the <strong>Small Blind base score</strong> — Big Blind = ×1.5, Boss Blind = ×2. Green/Black/Blue stakes share one set of increased requirements; Purple/Orange/Gold share an even higher set. <em>K = thousands, M = millions, B = billions.</em></p>
+
+<div id="ante-table-wrap">
+<table id="ante-table">
+    <thead>
+        <tr>
+            <th rowspan="2">Ante</th>
+            <th colspan="3">White / Red</th>
+            <th colspan="3">Green / Black / Blue</th>
+            <th colspan="3">Purple / Orange / Gold</th>
+        </tr>
+        <tr>
+            <th>Small</th><th>Big</th><th>Boss</th>
+            <th>Small</th><th>Big</th><th>Boss</th>
+            <th>Small</th><th>Big</th><th>Boss</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>300</td><td>450</td><td>600</td><td>300</td><td>450</td><td>600</td><td>300</td><td>450</td><td>600</td></tr>
+        <tr><td>2</td><td>800</td><td>1,200</td><td>1,600</td><td>900</td><td>1,350</td><td>1,800</td><td>1,000</td><td>1,500</td><td>2,000</td></tr>
+        <tr><td>3</td><td>2,000</td><td>3,000</td><td>4,000</td><td>2,600</td><td>3,900</td><td>5,200</td><td>3,200</td><td>4,800</td><td>6,400</td></tr>
+        <tr><td>4</td><td>5,000</td><td>7,500</td><td>10,000</td><td>8,000</td><td>12,000</td><td>16,000</td><td>9,000</td><td>13,500</td><td>18,000</td></tr>
+        <tr><td>5</td><td>11,000</td><td>16,500</td><td>22,000</td><td>20,000</td><td>30,000</td><td>40,000</td><td>25,000</td><td>37,500</td><td>50,000</td></tr>
+        <tr><td>6</td><td>20,000</td><td>30,000</td><td>40,000</td><td>36,000</td><td>54,000</td><td>72,000</td><td>60,000</td><td>90,000</td><td>120,000</td></tr>
+        <tr><td>7</td><td>35,000</td><td>52,500</td><td>70,000</td><td>60,000</td><td>90,000</td><td>120,000</td><td>110,000</td><td>165,000</td><td>220,000</td></tr>
+        <tr><td>8</td><td>50,000</td><td>75,000</td><td>100,000</td><td>100,000</td><td>150,000</td><td>200,000</td><td>200,000</td><td>300,000</td><td>400,000</td></tr>
+        <tr class="ante-divider"><td colspan="10">Endless Mode — Antes 9+</td></tr>
+        <tr class="endless"><td>9</td><td>110K</td><td>165K</td><td>220K</td><td>230K</td><td>345K</td><td>460K</td><td>460K</td><td>690K</td><td>920K</td></tr>
+        <tr class="endless"><td>10</td><td>560K</td><td>840K</td><td>1.1M</td><td>1.1M</td><td>1.7M</td><td>2.2M</td><td>2.2M</td><td>3.3M</td><td>4.4M</td></tr>
+        <tr class="endless"><td>11</td><td>7.2M</td><td>10.8M</td><td>14.4M</td><td>14M</td><td>21M</td><td>28M</td><td>29M</td><td>43.5M</td><td>58M</td></tr>
+        <tr class="endless"><td>12</td><td>300M</td><td>450M</td><td>600M</td><td>600M</td><td>900M</td><td>1.2B</td><td>1.2B</td><td>1.8B</td><td>2.4B</td></tr>
+        <tr class="endless"><td>13</td><td>47B</td><td>70.5B</td><td>94B</td><td>94B</td><td>141B</td><td>188B</td><td>180B</td><td>270B</td><td>360B</td></tr>
+        <tr class="endless"><td>14</td><td>2.9e13</td><td>4.4e13</td><td>5.8e13</td><td>5.8e13</td><td>8.7e13</td><td>1.2e14</td><td>1.1e14</td><td>1.7e14</td><td>2.2e14</td></tr>
+        <tr class="endless"><td>15</td><td>7.7e16</td><td>1.2e17</td><td>1.5e17</td><td>1.5e17</td><td>2.3e17</td><td>3.0e17</td><td>3.0e17</td><td>4.5e17</td><td>6.0e17</td></tr>
+        <tr class="endless"><td>16</td><td>8.6e20</td><td>1.3e21</td><td>1.7e21</td><td>1.7e21</td><td>2.6e21</td><td>3.4e21</td><td>3.4e21</td><td>5.1e21</td><td>6.8e21</td></tr>
+        <tr class="endless"><td>17</td><td>4.2e25</td><td>6.3e25</td><td>8.4e25</td><td>8.4e25</td><td>1.3e26</td><td>1.7e26</td><td>1.6e26</td><td>2.4e26</td><td>3.2e26</td></tr>
+        <tr class="endless"><td>18</td><td>9.2e30</td><td>1.4e31</td><td>1.8e31</td><td>1.8e31</td><td>2.7e31</td><td>3.6e31</td><td>3.7e31</td><td>5.6e31</td><td>7.4e31</td></tr>
+        <tr class="endless"><td>19</td><td>9.2e36</td><td>1.4e37</td><td>1.8e37</td><td>1.8e37</td><td>2.7e37</td><td>3.6e37</td><td>3.7e37</td><td>5.6e37</td><td>7.4e37</td></tr>
+        <tr class="endless"><td>20</td><td>4.3e43</td><td>6.5e43</td><td>8.6e43</td><td>8.6e43</td><td>1.3e44</td><td>1.7e44</td><td>1.7e44</td><td>2.6e44</td><td>3.4e44</td></tr>
+        <tr class="endless"><td>21</td><td>9.7e50</td><td>1.5e51</td><td>1.9e51</td><td>1.9e51</td><td>2.9e51</td><td>3.8e51</td><td>3.8e51</td><td>5.7e51</td><td>7.6e51</td></tr>
+        <tr class="endless"><td>22</td><td>1.0e59</td><td>1.5e59</td><td>2.0e59</td><td>2.1e59</td><td>3.2e59</td><td>4.2e59</td><td>4.2e59</td><td>6.3e59</td><td>8.4e59</td></tr>
+        <tr class="endless"><td>23</td><td>5.8e67</td><td>8.7e67</td><td>1.2e68</td><td>1.1e68</td><td>1.7e68</td><td>2.2e68</td><td>2.3e68</td><td>3.5e68</td><td>4.6e68</td></tr>
+        <tr class="endless"><td>24</td><td>1.6e77</td><td>2.4e77</td><td>3.2e77</td><td>3.3e77</td><td>5.0e77</td><td>6.6e77</td><td>6.6e77</td><td>9.9e77</td><td>1.3e78</td></tr>
+        <tr class="endless"><td>25</td><td>2.4e87</td><td>3.6e87</td><td>4.8e87</td><td>4.9e87</td><td>7.4e87</td><td>9.8e87</td><td>9.8e87</td><td>1.5e88</td><td>2.0e88</td></tr>
+        <tr class="endless"><td>26</td><td>1.9e98</td><td>2.9e98</td><td>3.8e98</td><td>3.9e98</td><td>5.9e98</td><td>7.8e98</td><td>7.8e98</td><td>1.2e99</td><td>1.6e99</td></tr>
+        <tr class="endless"><td>27</td><td>8.4e109</td><td>1.3e110</td><td>1.7e110</td><td>1.6e110</td><td>2.4e110</td><td>3.2e110</td><td>3.3e110</td><td>5.0e110</td><td>6.6e110</td></tr>
+        <tr class="endless"><td>28</td><td>2.0e122</td><td>3.0e122</td><td>4.0e122</td><td>4.0e122</td><td>6.0e122</td><td>8.0e122</td><td>8.1e122</td><td>1.2e123</td><td>1.6e123</td></tr>
+        <tr class="endless"><td>29</td><td>2.7e135</td><td>4.1e135</td><td>5.4e135</td><td>5.5e135</td><td>8.3e135</td><td>1.1e136</td><td>1.1e136</td><td>1.7e136</td><td>2.2e136</td></tr>
+        <tr class="endless"><td>30</td><td>2.1e149</td><td>3.2e149</td><td>4.2e149</td><td>4.3e149</td><td>6.5e149</td><td>8.6e149</td><td>8.6e149</td><td>1.3e150</td><td>1.7e150</td></tr>
+        <tr class="endless"><td>31</td><td>9.9e163</td><td>1.5e164</td><td>2.0e164</td><td>1.9e164</td><td>2.9e164</td><td>3.8e164</td><td>3.9e164</td><td>5.9e164</td><td>7.8e164</td></tr>
+        <tr class="endless"><td>32</td><td>2.7e179</td><td>4.1e179</td><td>5.4e179</td><td>5.4e179</td><td>8.1e179</td><td>1.1e180</td><td>1.0e180</td><td>1.5e180</td><td>2.0e180</td></tr>
+        <tr class="endless"><td>33</td><td>4.4e195</td><td>6.6e195</td><td>8.8e195</td><td>8.9e195</td><td>1.3e196</td><td>1.8e196</td><td>1.7e196</td><td>2.6e196</td><td>3.4e196</td></tr>
+        <tr class="endless"><td>34</td><td>4.4e212</td><td>6.6e212</td><td>8.8e212</td><td>8.9e212</td><td>1.3e213</td><td>1.8e213</td><td>1.7e213</td><td>2.6e213</td><td>3.4e213</td></tr>
+        <tr class="endless"><td>35</td><td>2.8e230</td><td>4.2e230</td><td>5.6e230</td><td>5.6e230</td><td>8.4e230</td><td>1.1e231</td><td>1.1e231</td><td>1.7e231</td><td>2.2e231</td></tr>
+        <tr class="endless"><td>36</td><td>1.1e249</td><td>1.7e249</td><td>2.2e249</td><td>2.2e249</td><td>3.3e249</td><td>4.4e249</td><td>4.4e249</td><td>6.6e249</td><td>8.8e249</td></tr>
+        <tr class="endless"><td>37</td><td>2.7e268</td><td>4.1e268</td><td>5.4e268</td><td>5.5e268</td><td>8.3e268</td><td>1.1e269</td><td>1.1e269</td><td>1.7e269</td><td>2.2e269</td></tr>
+        <tr class="endless"><td>38</td><td>4.5e288</td><td>6.8e288</td><td>9.0e288</td><td>9.0e288</td><td>1.4e289</td><td>1.8e289</td><td>1.8e289</td><td>2.7e289</td><td>3.6e289</td></tr>
+        <tr class="endless nan"><td>39</td><td colspan="9">NaN — score overflows float64 on all stakes</td></tr>
+    </tbody>
+</table>
+</div>
+
+<p><em>Note: The Wall boss blind has a 4× base requirement instead of 2×. Violet Vessel also has an inflated requirement. Ante 39 overflows to NaN (effectively unwinnable).</em></p>
+
+<hr>
+
+<hr>
+
+<!-- BALARODLE SECTION -->
+<h2 id="section-balarodle">Balarodle</h2>
+
+<div id="balarodle">
+    <p id="brd-subtitle">Guess the joker of the day!</p>
+
+    <div id="brd-mystery-area">
+        <img id="brd-mystery-img" src="https://www.balatrodle.com/jokers/undiscovered.png" alt="?">
+        <div id="brd-mystery-name" class="brd-badge brd-dark">?????</div>
+    </div>
+
+    <div id="brd-input-row">
+        <div id="brd-input-wrap">
+            <input type="text" id="brd-input" placeholder="Enter a joker" autocomplete="off">
+        </div>
+        <button id="brd-guess-btn" class="brd-badge">Submit</button>
+    </div>
+
+    <div id="brd-guesses"></div>
+    <div id="brd-result" hidden></div>
+    <button id="brd-new-btn" class="brd-badge" hidden>New Game</button>
+</div>
+
+<hr>
+
+<p><em>Balatro was created by LocalThunk and published by Playstack. This is a fan-made wiki page.</em></p>
+
+
+<!-- Joker Demo Panel -->
+<button id="panel-toggle-btn">Joker Demo</button>
+
+<div id="joker-panel">
+    <div id="joker-panel-inner">
+        <div id="joker-panel-header">
+            <span>Joker Demo</span>
+            <button id="panel-close-btn">✕</button>
+        </div>
+        <div id="joker-panel-body">
+            <p class="demo-desc">Pick a hand &amp; see your score!</p>
+
+            <label class="demo-label">Poker Hand</label>
+            <select id="hand-select"></select>
+
+            <label class="demo-label">Your Jokers <span class="demo-hint">(click slot to reroll)</span></label>
+            <div id="joker-slots">
+                <div class="joker-card-slot" id="joker-slot-0"></div>
+                <div class="joker-card-slot" id="joker-slot-1"></div>
+                <div class="joker-card-slot" id="joker-slot-2"></div>
+            </div>
+
+            <div id="demo-actions">
+                <button id="reroll-btn">🎲 Reroll All</button>
+                <button id="play-btn">▶ Play Hand</button>
+            </div>
+
+            <div id="score-result" hidden>
+                <div id="score-breakdown"></div>
+                <div id="score-final"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="back-to-top" title="Back to top">↑</button>
+
+<script src="minigame.js"></script>
+<script src="joker-data.js"></script>
+<script src="interactions.js"></script>
+<script src="balarodle.js"></script>
+
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Load saved preference
+    if (localStorage.getItem('theme') === 'light') {
+        body.classList.add('light');
+        toggle.textContent = 'Light';
+    }
+
+    toggle.addEventListener('click', () => {
+        body.classList.toggle('light');
+        const isLight = body.classList.contains('light');
+        toggle.textContent = isLight ? 'Light' : 'Dark';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+</script>
+  
+</body>
+</html>
