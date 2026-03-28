@@ -75,6 +75,7 @@ sections.forEach(s => observer.observe(s));
 
 // Smooth scroll for nav links (offsets for sticky nav)
 navLinks.forEach(a => {
+    if (!a.getAttribute('href').startsWith('#')) return;
     a.addEventListener('click', e => {
         e.preventDefault();
         const target = document.querySelector(a.getAttribute('href'));
